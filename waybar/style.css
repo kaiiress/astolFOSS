@@ -1,0 +1,193 @@
+/* -- Global rules -- */
+* {
+  border: none;
+  font-family: "JetbrainsMono Nerd Font";
+  font-size: 15px;
+  min-height: 10px;
+}
+
+window#waybar {
+  background: rgba(198, 203, 245, 0.1);
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+/* - Genera rules for visible modules -- */
+#custom-archicon,
+#clock,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#idle_inhibitor,
+#pulseaudio,
+#network,
+#custom-orbit,
+#custom-notification {
+  color: #161320;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: none;
+}
+
+/* Separation to the left */
+#custom-archicon,
+#cpu,
+#idle_inhibitor {
+  margin-left: 5px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+/* Separation to the rigth */
+#clock,
+#temperature {
+  margin-right: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* -- Specific styles -- */
+
+/* Modules left */
+#custom-archicon {
+  font-size: 20px;
+  color: #89B4FA;
+  background: #161320;
+  padding-right: 17px;
+}
+
+#clock {
+background: linear-gradient(135deg, #DE006F, #D7218E);
+color: #0f0f14;
+}
+
+#cpu {
+background: linear-gradient(135deg, #bd93f9, #B196F9);
+border-radius: 10px 0 0 10px;
+}
+
+/* Middle segments */
+#memory {
+background: linear-gradient(135deg, #D7218E, #CE47B2);
+border-radius: 0;
+}
+#disk {
+background: linear-gradient(135deg, #CE47B2, #C960C9);
+border-radius: 0;
+}
+
+/* Right rounded edge */
+#temperature {
+background: linear-gradient(135deg, #C960C9, #C37AE1);
+border-radius: 0 10px 10px 0;
+}
+
+#cpu, #memory, #clock, #disk, #temperature {
+box-shadow: 0 0 10px rgba(180,160,255,0.45);
+}
+
+
+/* Modules center */
+#workspaces {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin: 6px 5px;
+  padding: 0px 6px;
+}
+
+#workspaces button {
+  color: #B5E8E0;
+  background: transparent;
+  padding: 4px 4px;
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#workspaces button.occupied {
+  color: #A6E3A1;
+}
+
+#workspaces button.active {
+  color: #89B4FA;
+  text-shadow: 0 0 4px #ABE9B3;
+}
+
+#workspaces button:hover {
+  color: #89B4FA;
+}
+
+#workspaces button.active:hover {}
+
+/* Modules right */
+#taskbar {
+  background: transparent;
+  border-radius: 10px;
+  padding: 0px 5px;
+  margin: 6px 5px;
+}
+
+#taskbar button {
+  padding: 0px 5px;
+  margin: 0px 3px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+#taskbar button.active {
+  background: rgba(34, 36, 54, 0.5);
+}
+
+#taskbar button:hover {
+  background: rgba(34, 36, 54, 0.5);
+}
+
+#idle_inhibitor {
+  background: linear-gradient(135deg, #DE006F, #D7218E);
+  padding-right: 15px;
+}
+
+#pulseaudio {
+  min-width: 55px;
+  color: #0f0f14;
+  background: linear-gradient(135deg, #D7218E, #CE47B2);
+}
+
+#network {
+  background: linear-gradient(135deg, #CE47B2, #C960C9);
+  padding-right: 13px;
+}
+
+#custom-orbit {
+  background: linear-gradient(135deg, #C960C9, #C37AE1);
+  font-size: 15px;
+  color: #0f0f14;
+  margin-right: 5px;
+  /*padding: 6px 12px;*/
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#custom-notification {
+  font-family: "NotoSansMono Nerd Font";
+  font-size: 20px;
+  color: #89B4FA;
+  background: #161320;
+  margin-right: 5px;
+  border-radius: 10px;
+}
+
+#idle_inhibitor, #pulseaudio, #pulseaudio-slider, #network, #custom-orbit {
+box-shadow: 0 0 10px rgba(180,160,255,0.45);
+}
+
+/* === Optional animation === */
+@keyframes blink {
+  to {
+    background-color: #BF616A;
+    color: #B5E8E0;
+  }
+}
