@@ -17,7 +17,7 @@ Installs:
 ## Install
 
 sudo pacman -S --needed git base-devel
-git clone https://github.com/kaiiress/astolfo-hypr.git
+git clone https://github.com/kaiiress/astolFOSS.git
 cd astolfo-hypr
 chmod +x install.sh
 ./install.sh
