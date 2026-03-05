@@ -38,10 +38,10 @@ sudo mkdir -p /usr/share/backgrounds
 sudo cp assets/astolfo.png /usr/share/backgrounds/astolfo.png
 
 echo "Hyprpaper config..."
-cp hyprpaper.conf ~/.config/hypr/hyprpaper.conf
+cp hypr/hyprpaper.conf ~/.config/hypr/hyprpaper.conf
 
 echo "Hyprland config..."
-cp hyprland.conf ~/.config/hypr/hyprland.conf
+cp hypr/hyprland.conf ~/.config/hypr/hyprland.conf
 
 echo "Installing Waybar config..."
 cp waybar/config.jsonc ~/.config/waybar/config
