@@ -50,9 +50,26 @@ cp waybar/style.css ~/.config/waybar/style.css
 echo "Installing Fastfetch config..."
 cp fastfetch/config.jsonc ~/.config/fastfetch/config
 
+echo "Installing Kitty config..."
+cp kitty/kitty.conf ~/.config/kitty/kitty.conf
+cp kitty/current-theme.conf ~/.config/kitty/current-theme.conf
+
+echo "Installing Fish config"
+cp fish/config.fish ~/.config/fish/config.fish
+
 echo "Creating pacman monster alias..."
 alias monster="sudo pacman"
 
 
 echo "Astolfo Hyprland setup complete!"
-echo "Reboot and login with Ly."
+
+echo "Do you want to reboot the system? (y/N)"
+	read -r answer
+
+	if [[ "$answer" == [Yy] ]]; then
+		echo "Rebooting system"
+		systemctl reboot
+	else
+		echo "The system will not reboot"
+	fi
+fi
