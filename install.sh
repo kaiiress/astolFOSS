@@ -22,6 +22,9 @@ fi
 echo "Installing the browser"
 paru -S firefox
 
+echo "Installing the wallpaper manager"
+paru -S awww-bin
+
 echo "Installing orbit (waybar module)"
 paru -S orbit-wifi
 
