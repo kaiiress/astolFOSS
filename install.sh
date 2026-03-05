@@ -37,8 +37,9 @@ echo "Installing wallpaper..."
 sudo mkdir -p /usr/share/backgrounds
 sudo cp assets/astolfo.png /usr/share/backgrounds/astolfo.png
 
-echo "Hyprpaper config..."
-cp hypr/hyprpaper.conf ~/.config/hypr/hyprpaper.conf
+echo "Wallpaper..."
+awww-daemon
+awww img /usr/share/backgrounds/astolfo.png --transition-fps 60 --transition-step 255 --transition-type any
 
 echo "Hyprland config..."
 cp hypr/hyprland.conf ~/.config/hypr/hyprland.conf
