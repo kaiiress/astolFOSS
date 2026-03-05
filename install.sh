@@ -3,7 +3,7 @@ set -e
 
 echo "Installing dependencies..."
 
-sudo pacman -S --needed --noconfirm hyprland hyprpaper waybar kitty rofi-wayland xdg-desktop-portal-hyprland polkit-kde-agent networkmanager ly fastfetch ttf-jetbrains-mono-nerd ttf-font-awesome noto-fonts noto-fonts-emoji pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber alsa-utils pamixer brightnessctl grim slurp wl-clipboard xdg-user-dirs xdg-utils neovim git unzip fish
+sudo pacman -S --needed --noconfirm hyprland hyprpaper waybar kitty rofi-wayland xdg-desktop-portal-hyprland polkit-kde-agent networkmanager ly fastfetch ttf-jetbrains-mono-nerd ttf-font-awesome noto-fonts noto-fonts-emoji pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber alsa-utils pamixer brightnessctl grim slurp wl-clipboard xdg-user-dirs xdg-utils neovim git unzip
 
 echo "Enabling services..."
 sudo systemctl enable NetworkManager
@@ -23,7 +23,7 @@ echo "Installing the browser"
 paru -S librewolf-bin
 
 echo "Setting Fish as default shell..."
-chsh -s /usr/bin/fish
+chsh -s $(which bash)
 
 echo "Creating config directories..."
 mkdir -p ~/.config/hypr
