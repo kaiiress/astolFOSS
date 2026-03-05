@@ -7,7 +7,7 @@ sudo pacman -S --needed --noconfirm hyprland hyprpaper waybar kitty rofi-wayland
 
 echo "Enabling services..."
 sudo systemctl enable NetworkManager
-sudo systemctl enable Ly@tty1.service
+sudo systemctl enable ly@tty1.service
 
 echo "Installing Paru (AUR helper)..."
 if ! command -v paru >/dev/null 2>&1; then
